@@ -153,3 +153,18 @@ git pull
 | `git fetch`                  | Downloads updates from the remote repository but doesn’t merge them automatically.          |
 | `git reset`                  | Unstages files or resets commits.                                                           |
 
+---
+all the command`s you need 
+```
+git init
+git add README.md
+git commit -m "<YOUR masge here>"
+git branch -M main
+git remote add origin https://github.com/<username>/<repoName>.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin  https://github.com/<username>/<repoName>.git
+git branch -M main
+git push -u origin main
+```
+
