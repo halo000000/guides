@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
+* [Go](go.md)
 * [Basic Use of Go's net/http Package](basic-use-of-gos-net-http-package.md)
 * [HTML Templates in Go](html-templates-in-go.md)
 * [fmt Package](fmt-package.md)
