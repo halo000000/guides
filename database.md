@@ -231,6 +231,49 @@ You’ve now learned how to connect to PostgreSQL, SQLite, and MySQL databases a
 
 With these fundamentals, you can start building Go applications that interact with databases efficiently!
 
+### &#x20;table listing typical functions&#x20;
+
+table listing typical functions you might find in a Go database package (like using the `database/sql` package),&#x20;
+
+
+
+| **Function**            | **Parameters**                             | **What It Does**                                                                 |
+| ----------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- |
+| `sql.Open`              | `driverName string, dataSourceName string` | Opens a database connection. Does not verify the connection at this point.       |
+| `db.Ping`               | None                                       | Verifies that the database connection is alive.                                  |
+| `db.Query`              | `query string, args ...interface{}`        | Executes a query that returns rows (e.g., `SELECT`).                             |
+| `db.QueryRow`           | `query string, args ...interface{}`        | Executes a query that returns a single row.                                      |
+| `db.Exec`               | `query string, args ...interface{}`        | Executes a query that does not return rows (e.g., `INSERT`, `UPDATE`, `DELETE`). |
+| `rows.Next`             | None                                       | Advances to the next row in the query result set.                                |
+| `rows.Scan`             | `dest ...interface{}`                      | Reads the values of the current row into the provided variables.                 |
+| `rows.Close`            | None                                       | Closes the rows iterator to free resources.                                      |
+| `stmt.Query`            | `args ...interface{}`                      | Executes a prepared statement that returns rows.                                 |
+| `stmt.Exec`             | `args ...interface{}`                      | Executes a prepared statement that does not return rows.                         |
+| `db.Prepare`            | `query string`                             | Prepares a query for execution, which can be reused multiple times.              |
+| `db.Begin`              | None                                       | Starts a new database transaction.                                               |
+| `tx.Commit`             | None                                       | Commits the current transaction.                                                 |
+| `tx.Rollback`           | None                                       | Rolls back the current transaction.                                              |
+| `db.Close`              | None                                       | Closes the database connection and releases resources.                           |
+| `sql.ErrNoRows`         | None                                       | A predefined error that indicates no rows were found in the query result.        |
+| `sql.Rows.Columns`      | None                                       | Returns the column names of the query result set.                                |
+| `sql.Rows.Err`          | None                                       | Returns any error that occurred during iteration of rows.                        |
+| `db.SetMaxOpenConns`    | `n int`                                    | Sets the maximum number of open connections to the database.                     |
+| `db.SetMaxIdleConns`    | `n int`                                    | Sets the maximum number of idle connections in the connection pool.              |
+| `db.SetConnMaxLifetime` | `d time.Duration`                          | Sets the maximum amount of time a connection may be reused.                      |
+
+***
+
+#### Notes:
+
+1. **Abbreviations:**
+   * `db` is a shorthand for a `*sql.DB` instance.
+   * `stmt` is a shorthand for a `*sql.Stmt` instance.
+   * `tx` is a shorthand for a `*sql.Tx` instance.
+2. Functions like `Query` and `Exec` are variadic (`args ...interface{}`), allowing multiple arguments for query parameters.
+3. Proper error handling is essential when using these functions to ensure robust database interaction.
+
+
+
 
 
 ***
