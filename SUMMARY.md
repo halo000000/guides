@@ -1,9 +1,12 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Go](go.md)
-* [Basic Use of Go's net/http Package](basic-use-of-gos-net-http-package.md)
-* [HTML Templates in Go](html-templates-in-go.md)
+* [Get started](get-started.md)
+* [Intermediate Go](intermediate-go.md)
+* [Advance Go](advance-go.md)
+* [All Go](all-go.md)
+* [net/http Package](net-http-package.md)
+* [html/template package](html-template-package.md)
 * [fmt Package](fmt-package.md)
 * [encoding/json Package](encoding-json-package.md)
 * [The godotenv package](the-godotenv-package.md)

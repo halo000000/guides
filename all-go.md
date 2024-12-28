@@ -1,8 +1,9 @@
 ---
 icon: golang
+description: this is a alternative documentation where everything is on one page
 ---
 
-# Go
+# All Go
 
 ### Getting Started
 

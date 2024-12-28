@@ -2,9 +2,11 @@
 icon: html5
 ---
 
-# HTML Templates in Go
+# html/template package
 
-## The `html/template` package provides a simple and powerful way to generate HTML output. It is part of the standard library in Go.
+## HTML Templates in Go
+
+The `html/template` package provides a simple and powerful way to generate HTML output. It is part of the standard library in Go.
 
 ### **1. `template.New`**
 
