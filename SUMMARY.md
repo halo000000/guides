@@ -7,6 +7,7 @@
 * [All Go](all-go.md)
 * [net/http Package](net-http-package.md)
 * [html/template package](html-template-package.md)
+* [Database](database.md)
 * [fmt Package](fmt-package.md)
 * [encoding/json Package](encoding-json-package.md)
 * [The godotenv package](the-godotenv-package.md)
