@@ -4,8 +4,6 @@ icon: golang
 
 # Get started
 
-###
-
 ## basics of Go beginner level
 
 in this page you will learn the basics  of go-lang&#x20;
