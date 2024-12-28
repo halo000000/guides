@@ -16,12 +16,11 @@
 * [The io package in Go](the-io-package-in-go.md)
 * [The log package in Go](the-log-package-in-go.md)
 * [The os package in Go](the-os-package-in-go.md)
+* [FastHTTP](fasthttp.md)
+* [GoQuery](goquery.md)
+* [Blackfriday](blackfriday.md)
 
 ## views
 
 * [HTMX](views/htmx.md)
 * [Alpine.js](views/alpine.js.md)
-
-***
-
-* [FastHTTP](fasthttp.md)
