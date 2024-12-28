@@ -15,4 +15,7 @@
 * [The io package in Go](the-io-package-in-go.md)
 * [The log package in Go](the-log-package-in-go.md)
 * [The os package in Go](the-os-package-in-go.md)
-* [HTMX](htmx.md)
+
+## views
+
+* [HTMX](views/htmx.md)
