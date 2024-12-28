@@ -21,3 +21,7 @@
 
 * [HTMX](views/htmx.md)
 * [Alpine.js](views/alpine.js.md)
+
+***
+
+* [FastHTTP](fasthttp.md)
