@@ -193,6 +193,34 @@ fmt.Println("Data deleted successfully!")
 
 ***
 
+#### converting data to slice
+
+you can fetch data and convert it to slice and send it or work with the data
+
+```go
+type Note struct{
+	Id string
+	Title string
+	Text string
+}
+getNotes:=func (w http.ResponseWriter, r *http.Request)  {
+row,_ := db.Query("SELECT id, title, text FROM notes")
+defer row.Close()
+
+var notes []Note // we make a slice of Notes and each note is a struct 
+for row.Next() {  // we can use the  next function to itrate over all the rows inside the qurey 
+	var note Note
+	row.Scan(&note.Id,&note.Title, &note.Text) // with the scan function we add all the data to each note inside the slice 
+	notes = append(notes, note) // we append each note to the note slice 
+}
+html, _ := template.ParseFiles("index.html")
+html.Execute(w,notes)
+
+}
+```
+
+***
+
 ### **4. Wrapping Up**
 
 You’ve now learned how to connect to PostgreSQL, SQLite, and MySQL databases and execute basic SQL queries using Go. To make your applications production-ready, consider the following best practices:
@@ -202,3 +230,7 @@ You’ve now learned how to connect to PostgreSQL, SQLite, and MySQL databases a
 * Use environment variables or a configuration file to manage database credentials.
 
 With these fundamentals, you can start building Go applications that interact with databases efficiently!
+
+
+
+***
