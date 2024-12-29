@@ -156,6 +156,38 @@ Access `http://localhost:8080/greet?name=Areen` to see the greeting with your na
 
 ***
 
+
+
+### path parameters in Go using the `net/http` package
+
+you can get path parames with `r.PathValue("param-name")`
+
+url example `http://localhost:8080/{user}/{post}/{id}`
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func main() {
+	http.HandleFunc("/users/{id}", handler)
+	http.ListenAndServe(":8080", nil)
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	// you can get path parames with r.PathValue("param-name")
+	id := r.PathValue("id")
+	fmt.Printf("User ID: %s\n", id)
+	fmt.Fprintf(w, "User ID: %s\n", id)
+}
+
+```
+
+***
+
 ## 4. Using Custom Handlers
 
 For more control, implement the `http.Handler` interface with a custom struct.
