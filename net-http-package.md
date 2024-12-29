@@ -156,9 +156,9 @@ Access `http://localhost:8080/greet?name=Areen` to see the greeting with your na
 
 ***
 
+## 4. Handling path Parameters
 
-
-### path parameters in Go using the `net/http` package
+path parameters in Go using the `net/http` package&#x20;
 
 you can get path parames with `r.PathValue("param-name")`
 
@@ -188,7 +188,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 ***
 
-## 4. Using Custom Handlers
+## 5. Using Custom Handlers
 
 For more control, implement the `http.Handler` interface with a custom struct.
 
@@ -222,7 +222,7 @@ func main() {
 
 ***
 
-## 5. Middleware Example
+## 6. Middleware Example
 
 Middleware allows pre- or post-processing of HTTP requests and responses.
 
